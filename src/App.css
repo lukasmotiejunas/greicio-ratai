@@ -17,6 +17,7 @@
   justify-content: center;
   padding-block: clamp(2rem, 8vh, 4rem);
   padding-inline: clamp(1rem, 3vw, 2rem);
+  overflow-x: clip;
   background-color: var(--color-bg);
   background-image:
     radial-gradient(
@@ -68,6 +69,10 @@
   width: 100%;
 }
 
+.neonTitleWrap + .registrationBlock {
+  margin-top: clamp(1.25rem, 3.5vw, 2.5rem);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -103,46 +108,34 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
-  column-gap: clamp(0.35rem, 1.5vw, 0.65rem);
-  row-gap: 0.35rem;
+  gap: clamp(0.75rem, 2.5vw, 1.35rem);
   font-family: var(--font-display);
   font-size: clamp(1rem, 2.8vw, 1.55rem);
-  line-height: 1.15;
+  line-height: 1;
   text-transform: uppercase;
 }
 
-.eventTaglineItem {
-  display: inline-flex;
-  align-items: baseline;
-}
-
 .eventTaglineSep {
-  display: inline-block;
-  align-self: center;
-  width: 0.28rem;
-  height: 0.28rem;
-  margin-inline: clamp(0.2rem, 0.8vw, 0.45rem);
+  flex-shrink: 0;
+  width: 0.32rem;
+  height: 0.32rem;
   border-radius: 50%;
   background: color-mix(in srgb, var(--color-highlight) 55%, transparent);
   box-shadow: 0 0 10px color-mix(in srgb, var(--color-highlight) 40%, transparent);
-  transform: translateY(-0.12em);
 }
 
 .eventTaglineWord {
+  display: block;
   letter-spacing: 0.18em;
   white-space: nowrap;
-}
-
-.eventTaglineDot {
-  letter-spacing: 0;
-  margin-left: 0.02em;
-  opacity: 0.85;
+  line-height: 1;
 }
 
 .eventTaglineWord--lights {
   color: #b8ecff;
+  transform: translateY(0.06em);
   text-shadow:
     0 0 18px color-mix(in srgb, var(--color-accent) 80%, transparent),
     0 0 42px color-mix(in srgb, var(--color-accent) 35%, transparent);
@@ -199,22 +192,12 @@
   }
 }
 
-.neonSvg {
+.neonLogo {
   display: block;
-  width: min(100%, 1680px);
+  width: min(88vw, 960px);
   height: auto;
   margin-inline: auto;
-}
-
-.neonSvgText {
-  font-family: var(--font-display);
-  font-size: 118px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.neonSvgTextCore {
-  paint-order: stroke fill;
+  pointer-events: none;
 }
 
 .cta {
@@ -307,8 +290,9 @@
 }
 
 .regCarousel {
-  width: 100%;
-  max-width: min(100%, 920px);
+  width: 100vw;
+  max-width: 100vw;
+  margin-inline: calc(50% - 50vw);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -319,9 +303,10 @@
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 16px;
+  border-radius: 0;
   overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--color-highlight) 25%, transparent);
+  border-block: 1px solid color-mix(in srgb, var(--color-highlight) 25%, transparent);
+  border-inline: none;
   box-shadow:
     0 0 0 1px color-mix(in srgb, var(--color-primary) 40%, #000),
     0 0 32px color-mix(in srgb, var(--color-primary) 45%, transparent),
@@ -428,14 +413,8 @@
 }
 
 @media (max-width: 720px) {
-  .neonSvg {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .neonSvgText {
-    font-size: 98px;
-    letter-spacing: 0.022em;
+  .neonLogo {
+    width: min(94vw, 640px);
   }
 
   .regCarouselViewport {
@@ -692,17 +671,13 @@
 }
 
 @media (max-width: 420px) {
-  .neonSvgText {
-    font-size: 88px;
-    letter-spacing: 0.016em;
-  }
-
   .eventTaglineWord {
     letter-spacing: 0.12em;
   }
 
   .eventTaglineSep {
-    width: 0.45rem;
+    width: 0.36rem;
+    height: 0.36rem;
   }
 
   .relayCarouselArrow {
