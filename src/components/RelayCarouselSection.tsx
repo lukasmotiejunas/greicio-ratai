@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { NeonHeading } from './NeonHeading'
 
-const INTERVAL_MS = 5500
+const INTERVAL_MS = 3000
 
 type Slide = { src: string; alt: string }
 

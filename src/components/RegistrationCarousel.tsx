@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-const INTERVAL_MS = 5500
+const INTERVAL_MS = 3000
 
 const SLIDES = [
   {

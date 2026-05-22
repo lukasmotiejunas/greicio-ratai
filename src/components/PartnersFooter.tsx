@@ -1,20 +1,20 @@
 type Partner = {
   id: string
   label: string
-  className: string
-  /** Set when real logo is added, e.g. `/partners/nike.svg` */
-  logoSrc?: string
+  logoSrc: string
 }
 
-/** Placeholder partners — set `logoSrc` when final assets are ready */
 const PARTNERS: Partner[] = [
-  { id: 'nike', label: 'Nike', className: 'partnerLogo--nike' },
-  { id: 'adidas', label: 'adidas', className: 'partnerLogo--adidas' },
-  { id: 'puma', label: 'PUMA', className: 'partnerLogo--puma' },
-  { id: 'asics', label: 'ASICS', className: 'partnerLogo--asics' },
-  { id: 'garmin', label: 'GARMIN', className: 'partnerLogo--garmin' },
-  { id: 'decathlon', label: 'DECATHLON', className: 'partnerLogo--decathlon' },
-  { id: 'on', label: 'On', className: 'partnerLogo--on' },
+  {
+    id: 'sporto-renginiai',
+    label: 'Sporto renginiai',
+    logoSrc: '/partners/sporto-renginiai.png',
+  },
+  {
+    id: 'partner-shield',
+    label: 'Partneris',
+    logoSrc: '/partners/partner-shield.png',
+  },
 ]
 
 export function PartnersFooter() {
@@ -29,20 +29,16 @@ export function PartnersFooter() {
           {PARTNERS.map((partner) => (
             <li key={partner.id} className="partnersLogoItem">
               <div
-                className={`partnerLogo ${partner.className}`}
+                className="partnerLogo"
                 aria-label={`${partner.label} — partnerio logotipas`}
               >
-                {partner.logoSrc ? (
-                  <img
-                    className="partnerLogoImage"
-                    src={partner.logoSrc}
-                    alt={partner.label}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                ) : (
-                  <span className="partnerLogoLabel">{partner.label}</span>
-                )}
+                <img
+                  className="partnerLogoImage"
+                  src={partner.logoSrc}
+                  alt={partner.label}
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </li>
           ))}
