@@ -11,9 +11,9 @@ const PARTNERS: Partner[] = [
     logoSrc: '/partners/sporto-renginiai.png',
   },
   {
-    id: 'partner-shield',
-    label: 'Partneris',
-    logoSrc: '/partners/partner-shield.png',
+    id: 'volvere-run',
+    label: 'Volvere Run',
+    logoSrc: '/partners/volvere-run.png',
   },
 ]
 
