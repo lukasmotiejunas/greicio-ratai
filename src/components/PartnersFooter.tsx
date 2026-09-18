@@ -15,6 +15,21 @@ const PARTNERS: Partner[] = [
     label: 'Volvere Run',
     logoSrc: '/partners/volvere-run.png',
   },
+  { id: 'remejas-3', label: 'Rėmėjas', logoSrc: '/partners/3.svg' },
+  { id: 'remejas-4', label: 'Rėmėjas', logoSrc: '/partners/4.svg' },
+  { id: 'remejas-5', label: 'Rėmėjas', logoSrc: '/partners/5.svg' },
+  { id: 'remejas-8', label: 'Rėmėjas', logoSrc: '/partners/8.svg' },
+  { id: 'remejas-10', label: 'Rėmėjas', logoSrc: '/partners/10.svg' },
+  { id: 'remejas-11', label: 'Rėmėjas', logoSrc: '/partners/11.svg' },
+  { id: 'remejas-13', label: 'Rėmėjas', logoSrc: '/partners/13.svg' },
+  { id: 'remejas-14', label: 'Rėmėjas', logoSrc: '/partners/14.svg' },
+  { id: 'remejas-1', label: 'Rėmėjas', logoSrc: '/partners/1.svg' },
+  { id: 'remejas-2', label: 'Rėmėjas', logoSrc: '/partners/2.svg' },
+  { id: 'remejas-6', label: 'Rėmėjas', logoSrc: '/partners/6.svg' },
+  { id: 'remejas-7', label: 'Rėmėjas', logoSrc: '/partners/7.svg' },
+  { id: 'remejas-9', label: 'Rėmėjas', logoSrc: '/partners/9.svg' },
+  { id: 'remejas-12', label: 'Rėmėjas', logoSrc: '/partners/12.svg' },
+  { id: 'lumo', label: 'Lumo', logoSrc: '/partners/lumo-logo.png' },
 ]
 
 export function PartnersFooter() {

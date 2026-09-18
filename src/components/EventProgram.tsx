@@ -1,33 +1,35 @@
 const PROGRAM_ITEMS = [
   {
-    time: '19.30',
-    event: '60m mergaitės (2013 - 2014 m, 2015 m ir jaunesnės)',
+    time: "19.20",
+    event:
+      "60 m mergaičių bėgimai (2013 - 2014 m., 2015 - 2016 m., 2017m. ir jaunesnės)",
   },
   {
-    time: '20.00',
-    event: '60m berniukai (2013 - 2014 m, 2015 m ir jaunesni)',
+    time: "20.00",
+    event:
+      "60m berniukų bėgimai (2013 - 2014 m., 2015 - 2016 m., 2017m. ir jaunesni)",
   },
   {
-    time: '20.30',
-    event: '1000 m moterys ir su triračiais',
+    time: "20.40",
+    event: "1000 m moterų ir moterų su triračiais bėgimas",
   },
   {
-    time: '20.50',
-    event: '1000 m vyrai',
+    time: "20.50",
+    event: "1000 m vyrų ir vyrų su triračiais bėgimas",
   },
   {
-    time: '21.30',
-    event: 'estafetės 5x1000 m bėgimas (mišri)',
+    time: "21.00",
+    event: "5x1000 m estafetė (Mišri)",
   },
   {
-    time: '22.00',
-    event: 'estafetės 5x1000 m bėgimas (vyrai)',
+    time: "21.30",
+    event: "5x1000 m estafetė (Moterys)",
   },
   {
-    time: '22.30',
-    event: 'estafetės 5x1000 m bėgimas (moterys)',
+    time: "22.00",
+    event: "5x1000 m estafetė (Vyrai)",
   },
-] as const
+] as const;
 
 export function EventProgram() {
   return (
@@ -47,7 +49,10 @@ export function EventProgram() {
             </span>
 
             <div className="eventProgramCard">
-              <time className="eventProgramTime" dateTime={`2026-09-25T${item.time.replace('.', ':')}:00`}>
+              <time
+                className="eventProgramTime"
+                dateTime={`2026-09-25T${item.time.replace(".", ":")}:00`}
+              >
                 {item.time} val.
               </time>
               <span className="eventProgramDash" aria-hidden>
@@ -59,5 +64,5 @@ export function EventProgram() {
         ))}
       </ol>
     </section>
-  )
+  );
 }
